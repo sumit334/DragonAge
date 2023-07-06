@@ -1,7 +1,8 @@
 score = 0;
 cross = true;
 
-audioMusic = new Audio('music.mp3');
+audioMusic = new Audio('music.wav');
+audioMusic.loop = true;
 audioGameOver = new Audio('gameover.mp3');
 
 setTimeout(() => {
@@ -46,8 +47,8 @@ setInterval(() => {
 
     if (offSetX < 90 && offSetY < 54) {
 
-        document.onkeydown = function(e){
-            if(e.key=="Enter"){
+        document.onkeydown = function (e) {
+            if (e.key == "Enter") {
                 location.reload();
             }
         }
@@ -55,18 +56,18 @@ setInterval(() => {
         obstacle.classList.remove('obstacleAnimate');
         audioGameOver.play();
         setTimeout(() => {
-            if(score==0){
+            if (score == 0) {
                 scoreUpdate(score);
             }
-            else    scoreUpdate(score-100);
+            else scoreUpdate(score - 100);
         }, 1);
         setTimeout(() => {
             audioMusic.pause();
             audioGameOver.pause();
-            if(score==0){
+            if (score == 0) {
                 scoreUpdate(score);
             }
-            else    scoreUpdate(score-100);
+            else scoreUpdate(score - 100);
         }, 1000);
         cross = false;
     }

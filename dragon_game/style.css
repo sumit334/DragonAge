@@ -1,12 +1,14 @@
-*{
-    margin:0;
-    padding:0;
+* {
+    margin: 0;
+    padding: 0;
 }
-body{
-    /*background-color: red;*/
-    overflow:hidden ;
+
+body {
+    overflow: hidden;
 }
-.gameContainer{
+
+
+.gameContainer {
     background-image: url(background_Img.jpg);
     background-repeat: no-repeat;
     background-size: 100vw 100vh;
@@ -14,75 +16,85 @@ body{
     height: 100vh;
 }
 
-.dino{
+.dino {
     background-image: url(dino.png);
     background-repeat: no-repeat;
     background-size: cover;
     width: 218px;
-    height: 114px;
+    height: 200px;
     position: absolute;
     bottom: 15%;
     left: 12px;
 }
 
-.gameOver{
+.gameOver {
     position: relative;
     text-align: center;
     top: 150px;
     font-size: 50px;
     font-family: fantasy;
+    border: 5px inset blue;
+    margin-left: 8em;
+    margin-right: 8em;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
 }
 
-#gameScrore{
+#gameScrore {
     position: relative;
     text-align: center;
     /* left: 23px; */
     /* right: 23px; */
     /* width: 150px; */
-    border: 2px black;
+    border: 5px inset red;
+    margin-left: 20em;
+    margin-right: 20em;
     padding: 10px;
     font-size: 30px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
     font-family: fantasy;
 }
 
-.obstacle{
+.obstacle {
     background-image: url(dragon.png);
     width: 255px;
-    height: 150px;
+    height: 180px;
     background-size: cover;
     position: absolute;
     bottom: 13%;
     left: 80vw;
 }
 
-.animateDino{
+.animateDino {
     animation: dino 0.6s linear;
 
 }
 
-.obstacleAnimate{
-    animation: obstacleAnimate 4s linear infinite;
+.obstacleAnimate {
+    animation: obstacleAnimate 3s linear infinite;
 }
 
 @keyframes dino {
-    0%{
+    0% {
         bottom: 15%;
     }
 
-    50%{
+    50% {
         bottom: 450px;
     }
 
-    100%{
+    100% {
         bottom: 15%;
     }
 }
 
 @keyframes obstacleAnimate {
-    0%{
-        left:100vw;
+    0% {
+        left: 100vw;
     }
-    100%{
+
+    100% {
         left: -10vw;
     }
 }
